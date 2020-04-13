@@ -1,21 +1,19 @@
 
-var workDay = {
-    "9 AM": "",
-    "10 AM": "",
-    "11 AM": "",
-    "12 PM": "",
-    "1 PM": "",
-    "2 PM": "",
-    "3 PM": "",
-    "4 PM": "",
-    "5 PM": "",
-};
+// var workDay = {
+//     "9 AM": "",
+//     "10 AM": "",
+//     "11 AM": "",
+//     "12 PM": "",
+//     "1 PM": "",
+//     "2 PM": "",
+//     "3 PM": "",
+//     "4 PM": "",
+//     "5 PM": "",
+// };
 
 $(document).ready(function () {
 
     $(".saveBtn").on("click", function () {
-
-        console.log("hello")
 
         var value = $(this).siblings(".description").val();
 
@@ -26,29 +24,29 @@ $(document).ready(function () {
     })
 
 
-    if (!localStorage.getItem('workDay')) {
+    // if (!localStorage.getItem('workDay')) {
 
-        updateCalendarTasks(workDay);
+    //     updateCalendarTasks(workDay);
 
-    } else {
+    // } else {
 
-        updateCalendarTasks(JSON.parse(localStorage.getItem('workDay')));
+    //     updateCalendarTasks(JSON.parse(localStorage.getItem('workDay')));
 
-    }
+    // }
 
     function hourUpdater() {
 
         var currentHour = moment().hours();
 
-        $(".time-block").each(function () {
+        // $(".time-block").each(function () {
 
-            var blockHour
+        //     var blockHour
 
             $(".time-block").each(function () {
 
                 var blockHour = parseInt($(this).attr("id").split("-")[1])
 
-            })
+            // })
 
             if (blockHour < currentHour) {
 
